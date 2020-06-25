@@ -4,13 +4,13 @@
   "description": "",
   "scripts": {
     "start:dev": "npx nodemon",
-    "start": "npm run build && node build/index.js",
-    "build": "npx rimraf ./build && tsc",
+    "start": "npm run build && node ./build/main.js",
+    "build": "npx rimraf ./build && npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .ts",
-    "lint-and-fix": "eslint . --ext .ts --fix",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
+    "lint": "npx eslint . --ext .ts",
+    "lint-and-fix": "npx eslint . --ext .ts --fix",
+    "prettier-format": "npx prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier-watch": "npx onchange 'src/**/*.ts' -- prettier --write {{changed}}"
   },
   "dependencies": {},
   "devDependencies": {
